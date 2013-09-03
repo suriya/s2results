@@ -1,0 +1,23 @@
+
+ADMINS = (
+    ('John Doe', 'john.doe@example.com'),
+)
+
+# Make this unique, and don't share it with anybody.
+SECRET_KEY = 'Unique SECRET_KEY'
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',   # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '',   # Set to empty string for default.
+    }
+}
+
+EMAIL_HOST = 'stmp.example.com'
+EMAIL_HOST_USER = 'username'
+EMAIL_HOST_PASSWORD = 'password'
+SERVER_EMAIL = DEFAULT_FROM_EMAIL = 'info@example.com'
