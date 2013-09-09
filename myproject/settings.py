@@ -115,6 +115,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_pdb.middleware.PdbMiddleware',
 )
 
 ROOT_URLCONF = '{}.urls'.format(PROJECT_NAME)
@@ -141,6 +142,8 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'south',
     's2results',
+    'bootstrapform',
+    'django_pdb',
 )
 
 # A sample logging configuration. The only tangible logging
