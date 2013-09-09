@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block content %}
+<div class="row">
+    <div class="span6 offset3">
+        <div class="text-center page-header"> <h1>Examination Results</h1> </div>
+        <table class="table table-bordered">
+        {% for resultclass in resultclass_list %}
+            <tr><td>
+                    <a href="{{ resultclass.get_absolute_url }}">{{ resultclass }}</a>
+            </td></tr>
+        {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

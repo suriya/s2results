@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% load pdb %}
+
+{% block navbar %} <!-- No navbar --> {% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="span5 offset1">
+        <div class="text-center page-header"> <h1>{{ result.result_class.title }}</h1> </div>
+        <table class="table table-bordered">
+        {% for key, value in result.data %}
+            <tr>
+                <td> {{ key }} </td>
+                <td> {{ value }} </td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %} <!-- No footer text --> {% endblock %}

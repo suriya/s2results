@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block content %}
+<div class="row">
+    <div class="span5 offset1">
+        <div class="text-center page-header"> <h1>{{ result_class.title }}</h1> </div>
+        <form method="post">{% csrf_token %}
+            {{ form|bootstrap }}
+            <div class="text-center form-actions" style="padding-left: 0px;">
+                <input type="submit" class="btn btn-primary" value="Search results" />
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

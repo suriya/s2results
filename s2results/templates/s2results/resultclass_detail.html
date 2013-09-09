@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block content %}
+<div class="row">
+    <div class="span6 offset3">
+        <div class="text-center page-header"> <h1>{{ resultclass.title }}</h1> </div>
+        <p>{{ resultclass.description }}</p>
+        <p class="text-center"> Number of candidates : {{ resultclass.result_set.count }} </p>
+        <p class="text-center">
+        <a href="{% url 'result-class-search' slug=resultclass.slug %}">
+            <button class="btn btn-primary">Find your result</button>
+        </a>
+        </p>
+    </div>
+</div>
+{% endblock %}
