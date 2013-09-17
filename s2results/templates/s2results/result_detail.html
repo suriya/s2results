@@ -2,11 +2,13 @@
 {% load bootstrap %}
 {% load pdb %}
 
+{% block title %}{{ result }}{% endblock %}
+
 {% block navbar %} <!-- No navbar --> {% endblock %}
 
 {% block content %}
 <div class="row">
-    <div class="span5 offset1">
+    <div class="span6 offset3">
         <div class="text-center page-header"> <h1>{{ result.result_class.title }}</h1> </div>
         <table class="table table-bordered">
         {% for key, value in result.data %}

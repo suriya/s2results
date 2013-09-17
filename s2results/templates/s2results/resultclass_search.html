@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load bootstrap %}
 
+{% block title %} Find your result {% endblock %}
 {% block content %}
 <div class="row">
     <div class="span5 offset1">
@@ -8,7 +9,7 @@
         <form method="post">{% csrf_token %}
             {{ form|bootstrap }}
             <div class="text-center form-actions" style="padding-left: 0px;">
-                <input type="submit" class="btn btn-primary" value="Search results" />
+                <input type="submit" class="btn btn-primary" value="Find result" />
             </div>
         </form>
     </div>
